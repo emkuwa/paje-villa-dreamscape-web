@@ -9,9 +9,11 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center" 
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1543355468-3fff89c3a3c2?q=80&w=1974&auto=format&fit=crop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
-        <div className="hero-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
       </div>
       
       <div className="relative h-full flex flex-col justify-center items-center text-center text-white p-4">
