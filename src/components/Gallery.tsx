@@ -6,49 +6,49 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg",
     alt: "Villa exterior view",
     category: "exterior"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1590073242678-70ee3fc28f8a?q=80&w=2021&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg",
     alt: "Swimming pool",
     category: "amenities"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
     alt: "Bedroom interior",
     category: "interior"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=2071&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/1019980/pexels-photo-1019980.jpeg",
     alt: "Beach view",
     category: "surroundings"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg",
     alt: "Bathroom",
     category: "interior"
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1578898886225-c7c894047899?q=80&w=2070&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/2199190/pexels-photo-2199190.jpeg",
     alt: "Breakfast spread",
     category: "food"
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/990432/pexels-photo-990432.jpeg",
     alt: "Villa garden",
     category: "exterior"
   },
   {
     id: 8,
-    url: "https://images.unsplash.com/photo-1617859047452-8510bcf207fd?q=80&w=2070&auto=format&fit=crop",
+    url: "https://images.pexels.com/photos/3532492/pexels-photo-3532492.jpeg",
     alt: "Kitesurfing at Paje Beach",
     category: "activities"
   }
@@ -101,7 +101,6 @@ const GallerySection = () => {
                   alt={image.alt} 
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  crossOrigin="anonymous"
                   onError={(e) => {
                     console.error(`Failed to load image: ${image.url}`);
                     e.currentTarget.src = "https://via.placeholder.com/400?text=Image+Not+Available";
@@ -119,7 +118,6 @@ const GallerySection = () => {
                 src={selectedImage} 
                 alt="Gallery image" 
                 className="w-full h-auto"
-                crossOrigin="anonymous"
                 onError={(e) => {
                   console.error(`Failed to load image in modal: ${selectedImage}`);
                   e.currentTarget.src = "https://via.placeholder.com/800x600?text=Image+Not+Available";

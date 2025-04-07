@@ -8,11 +8,10 @@ const Hero = () => {
       {/* Background Image Container with fixed positioning and z-index */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1543355468-3fff89c3a3c2?q=80&w=1974&auto=format&fit=crop"
+          src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg"
           alt="Hero background" 
           className="w-full h-full object-cover"
           loading="eager"
-          crossOrigin="anonymous"
         />
       </div>
       
