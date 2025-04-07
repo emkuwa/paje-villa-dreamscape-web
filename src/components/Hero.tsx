@@ -5,20 +5,21 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image Container with absolute positioning */}
-      <div className="absolute inset-0">
+      {/* Background Image Container with fixed positioning and z-index */}
+      <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1543355468-3fff89c3a3c2?q=80&w=1974&auto=format&fit=crop"
           alt="Hero background" 
           className="w-full h-full object-cover"
+          loading="eager"
           crossOrigin="anonymous"
         />
       </div>
       
-      {/* Dark overlay with proper opacity */}
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      {/* Darker overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
       
-      <div className="relative h-full flex flex-col justify-center items-center text-center text-white p-4">
+      <div className="relative z-20 h-full flex flex-col justify-center items-center text-center text-white p-4">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 max-w-4xl animate-fade-in">
           Tropical Paradise Just Steps from Paje Beach
         </h1>

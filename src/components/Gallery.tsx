@@ -92,16 +92,20 @@ const GallerySection = () => {
           {filteredImages.map((image) => (
             <div 
               key={image.id} 
-              className="overflow-hidden rounded-lg cursor-pointer hover-scale shadow-md"
+              className="overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300 shadow-lg"
               onClick={() => setSelectedImage(image.url)}
             >
-              <AspectRatio ratio={1 / 1}>
+              <AspectRatio ratio={1 / 1} className="bg-gray-100">
                 <img 
                   src={image.url} 
                   alt={image.alt} 
                   className="w-full h-full object-cover"
                   loading="lazy"
                   crossOrigin="anonymous"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${image.url}`);
+                    e.currentTarget.src = "https://via.placeholder.com/400?text=Image+Not+Available";
+                  }}
                 />
               </AspectRatio>
             </div>
@@ -116,6 +120,10 @@ const GallerySection = () => {
                 alt="Gallery image" 
                 className="w-full h-auto"
                 crossOrigin="anonymous"
+                onError={(e) => {
+                  console.error(`Failed to load image in modal: ${selectedImage}`);
+                  e.currentTarget.src = "https://via.placeholder.com/800x600?text=Image+Not+Available";
+                }}
               />
             )}
           </DialogContent>
