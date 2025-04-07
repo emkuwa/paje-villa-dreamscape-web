@@ -92,7 +92,7 @@ const GallerySection = () => {
           {filteredImages.map((image) => (
             <div 
               key={image.id} 
-              className="overflow-hidden rounded-lg cursor-pointer hover-scale"
+              className="overflow-hidden rounded-lg cursor-pointer hover-scale shadow-md"
               onClick={() => setSelectedImage(image.url)}
             >
               <AspectRatio ratio={1 / 1}>

@@ -5,19 +5,18 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      <div 
-        className="absolute inset-0" 
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1543355468-3fff89c3a3c2?q=80&w=1974&auto=format&fit=crop')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          height: '100vh',
-          width: '100%'
-        }}
-      />
-      {/* Add a dark overlay to improve text visibility */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      {/* Background Image Container with absolute positioning */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1543355468-3fff89c3a3c2?q=80&w=1974&auto=format&fit=crop"
+          alt="Hero background" 
+          className="w-full h-full object-cover"
+          crossOrigin="anonymous"
+        />
+      </div>
+      
+      {/* Dark overlay with proper opacity */}
+      <div className="absolute inset-0 bg-black opacity-60"></div>
       
       <div className="relative h-full flex flex-col justify-center items-center text-center text-white p-4">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 max-w-4xl animate-fade-in">
