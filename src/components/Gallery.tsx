@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const galleryImages = [
   {
@@ -91,15 +92,18 @@ const GallerySection = () => {
           {filteredImages.map((image) => (
             <div 
               key={image.id} 
-              className="aspect-square overflow-hidden rounded-lg cursor-pointer hover-scale"
+              className="overflow-hidden rounded-lg cursor-pointer hover-scale"
               onClick={() => setSelectedImage(image.url)}
             >
-              <img 
-                src={image.url} 
-                alt={image.alt} 
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+              <AspectRatio ratio={1 / 1}>
+                <img 
+                  src={image.url} 
+                  alt={image.alt} 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  crossOrigin="anonymous"
+                />
+              </AspectRatio>
             </div>
           ))}
         </div>
@@ -111,6 +115,7 @@ const GallerySection = () => {
                 src={selectedImage} 
                 alt="Gallery image" 
                 className="w-full h-auto"
+                crossOrigin="anonymous"
               />
             )}
           </DialogContent>

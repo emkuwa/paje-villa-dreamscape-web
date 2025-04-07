@@ -12,12 +12,12 @@ const Hero = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          height: '100%',
+          height: '100vh',
           width: '100%'
         }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
-      </div>
+      />
+      {/* Add a dark overlay to improve text visibility */}
+      <div className="absolute inset-0 bg-black opacity-40"></div>
       
       <div className="relative h-full flex flex-col justify-center items-center text-center text-white p-4">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 max-w-4xl animate-fade-in">
