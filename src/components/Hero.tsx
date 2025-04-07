@@ -6,11 +6,14 @@ const Hero = () => {
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center" 
+        className="absolute inset-0" 
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1543355468-3fff89c3a3c2?q=80&w=1974&auto=format&fit=crop')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          height: '100%',
+          width: '100%'
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
